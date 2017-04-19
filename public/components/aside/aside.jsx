@@ -17,33 +17,7 @@ export default class Aside extends React.Component {
           <ChannelsList data={data.channelsList} />
         </AsideItem>
         <AsideItem title="People">
-          <ul className="people__list">
-            <li className="people__item people__item_alert">
-              <img className="icon-users" src="./images/users.png" alt="users" />
-              <span className="people__item-title">Jesus Cruz</span>
-              <span className="people__item-icon alert-count">2</span>
-            </li>
-            <li className="people__item people__item_alert">
-              <img className="icon-users" src="./images/users.png" alt="users" />
-              <span className="people__item-title">Sallie Lopez</span>
-              <span className="people__item-icon alert-count">2</span>
-            </li>
-            <li className="people__item">
-              <img className="icon-users" src="./images/users.png" alt="users" />
-              <span className="people__item-title">Gregory Douglas</span>
-              <span className="people__item-icon alert-count"></span>
-            </li>
-            <li className="people__item">
-              <img className="icon-users" src="./images/users.png" alt="users" />
-              <span className="people__item-title">Maude Franklin</span>
-              <span className="people__item-icon alert-count"></span>
-            </li>
-            <li className="people__item">
-              <img className="icon-users" src="./images/users.png" alt="users" />
-              <span className="people__item-title">Lily Oliver</span>
-              <span className="people__item-icon alert-count"></span>
-            </li>
-          </ul>
+          <PeopleList data={data.peopleList} />
         </AsideItem>
       </div>
     );
