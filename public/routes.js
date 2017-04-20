@@ -7,8 +7,8 @@ import Login from './components/Login/Login.jsx';
 export default () => {
   return <Route>
     <Route path="/" component={App}>
-      <Route path="/chat" component={Chat} />
-      <Route path="/login" cocmponent={Login} />
+      <Route path="/chat" component={Chat}></Route>
+      <Route path="/login" component={Login}></Route>
     </Route>
   </Route>
 }
