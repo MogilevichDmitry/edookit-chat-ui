@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class AsideItem extends React.Component {
   render() {
@@ -14,8 +15,8 @@ class AsideItem extends React.Component {
 }
 
 AsideItem.propTypes = {
-  title: React.PropTypes.string,
-  children: React.PropTypes.node
+  title: PropTypes.string,
+  children: PropTypes.node
 }
 
 export default AsideItem;

@@ -1,9 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
 class ChannelsListItem extends React.Component {
   render() {
-    const {title, isAlert, isActive} = this.props;
+    const {title} = this.props;
     return(
       <li className="channels-list__item channels-list__item_alert">
         <span className="channels-list__item-icon alert-count">2</span>
@@ -13,5 +14,9 @@ class ChannelsListItem extends React.Component {
     );
   }
 }
+
+ChannelsListItem.propTypes = {
+  title: PropTypes.string
+};
 
 export default ChannelsListItem;

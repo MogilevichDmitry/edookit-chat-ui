@@ -1,7 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import GroupsListItem from './groups-list__item.jsx';
 
-export default class GroupsList extends React.Component {
+class GroupsList extends React.Component {
   render() {
     const {data} = this.props;
 
@@ -14,3 +15,9 @@ export default class GroupsList extends React.Component {
     );
   }
 }
+
+GroupsList.propTypes = {
+  data: PropTypes.array
+};
+
+export default GroupsList;

@@ -1,9 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
 class GroupsListItem extends React.Component {
   render() {
-    const {title, isAlert, isActive} = this.props;
+    const {title, isAlert, isActive } = this.props;
     return(
       <li className="groups-list__item">
         <button className={classnames({
@@ -17,5 +18,11 @@ class GroupsListItem extends React.Component {
     );
   }
 }
+
+GroupsListItem.propTypes = {
+  title: PropTypes.string,
+  isAlert: PropTypes.bool,
+  isActive: PropTypes.bool
+};
 
 export default GroupsListItem;

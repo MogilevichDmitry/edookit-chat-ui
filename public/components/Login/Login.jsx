@@ -16,8 +16,8 @@ export default class Login extends React.Component {
             <input type="checkbox" className="login__form-field_check" />Remember password
           </div>
           <div className="login__form-btn">
-            <button classname="login__form-btn_login">Login</button>
-            <a href="" classname="login__form-btn_title">Forgot password</a>
+            <button className="login__form-btn_login">Login</button>
+            <a href="" className="login__form-btn_title">Forgot password</a>
           </div>
           <div className="login__form-registry">
             <span className="registry__up"></span>

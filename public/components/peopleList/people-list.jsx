@@ -1,7 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import PeopleListItem from './people-list__item.jsx';
 
-export default class PeopleList extends React.Component {
+class PeopleList extends React.Component {
   render() {
     const {data} = this.props;
 
@@ -14,3 +15,9 @@ export default class PeopleList extends React.Component {
     );
   }
 }
+
+PeopleList.propTypes = {
+  data: PropTypes.array
+};
+
+export default PeopleList;
