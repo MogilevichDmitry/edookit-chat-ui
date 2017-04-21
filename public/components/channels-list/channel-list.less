@@ -1,0 +1,67 @@
+.channels-list {
+  list-style: none;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 4px 0px 4px 3px;
+    margin-right: 11px;
+    margin-top: 3px;
+
+    &_alert {
+      .alert-count {
+        display: flex;
+        margin-top: 1px;
+      }
+      .icon-peoples {
+        display: none;
+      }
+      .channels-list__item-title {
+        font-weight: 600;
+      }
+    }
+
+    &:first-child {
+      margin-top: 8px;
+    }
+
+    &-icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 11px;
+      width: 18px;
+      height: 18px;
+    }
+
+    &-title {
+      margin-left: 4px;
+      letter-spacing: 0.15px;
+    }
+
+    &_active {
+      background-color: #FFF;
+      border-radius: 6px;
+      color: #5CA0D7;
+      margin-top: 4px;
+    }
+  }
+}
+.alert-count {
+  display: none;
+  border-radius: 50%;
+  background-color: #F5B561;
+}
+.icon-peoples {
+  display: flex;
+}
+.btn-circle-plus {
+  //background: url('./assets/plus.svg') no-repeat 0 0;
+  background-size: cover;
+  width: 16px;
+  height: 16px;
+  text-indent: -9999px;
+  padding-top: 5px;
+}

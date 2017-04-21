@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ChannelsListItem from './channels-list__item.jsx';
 
+import './channel-list.less';
+
 class ChannelsList extends React.Component {
   render() {
     const {data} = this.props;
