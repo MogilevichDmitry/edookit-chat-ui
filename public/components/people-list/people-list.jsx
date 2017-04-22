@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import PeopleListItem from './people-list__item.jsx';
 
+import './people-list.less';
+
 class PeopleList extends React.Component {
   render() {
     const {data} = this.props;

@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import GroupsListItem from './groups-list__item.jsx';
 
+import './groups-list.less';
+
 class GroupsList extends React.Component {
   render() {
     const {data} = this.props;
