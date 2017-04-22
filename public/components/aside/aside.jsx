@@ -3,23 +3,34 @@ import AsideItem from './aside__item.jsx';
 import GroupsList from '../groups-list/groups-list.jsx';
 import ChannelsList from '../channels-list/channels-list.jsx';
 import PeopleList from '../people-list/people-list.jsx';
-import ButtonInvatePeople from '../button-invite/button-invite.jsx';
+import ButtonInvite from '../button-invite/button-invite.jsx';
+import ButtonPlusCircle from '../button-plus-circle/button-plus-circle.jsx';
+import ButtonMail from '../button-mail/button-mail.jsx';
+
+const ChannelsHeaderButton = () => (
+  <ButtonPlusCircle>Add Channel</ButtonPlusCircle>
+);
+
+const PeopleHeaderButton = () => (
+  <ButtonMail>Send message</ButtonMail>
+);
 
 import data from '../../constants/aside.data.js';
 import './aside.less';
 
 const Aside = () => (
   <div className="aside">
+    <ChannelsHeaderButton />
     <AsideItem title="Groups" isHeader={false}>
       <GroupsList data={data.groupsList} />
     </AsideItem>
-    <AsideItem title="Channels">
+    <AsideItem title="Channels" headerButton={<ChannelsHeaderButton />}>
       <ChannelsList data={data.channelsList} />
     </AsideItem>
-    <AsideItem title="People">
+    <AsideItem title="People" headerButton={<PeopleHeaderButton />}>
       <PeopleList data={data.peopleList} />
     </AsideItem>
-    <ButtonInvatePeople className="aside__button-invite" />
+    <ButtonInvite className="aside__button-invite" />
   </div>
 );
 
