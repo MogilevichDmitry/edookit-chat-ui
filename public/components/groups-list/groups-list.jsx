@@ -4,19 +4,13 @@ import GroupsListItem from './groups-list__item.jsx';
 
 import './groups-list.less';
 
-class GroupsList extends React.Component {
-  render() {
-    const {data} = this.props;
-
-    return(
-      <ul className="groups-list">
-        {data.map((title) => {
-          return <GroupsListItem key={title} title={title} />
-        })}
-      </ul>
-    );
-  }
-}
+const GroupsList = ({data}) => (
+  <ul className="groups-list">
+    {data.map((item) => {
+      return <GroupsListItem key={item.title} data={item} />
+    })}
+  </ul>
+)
 
 GroupsList.propTypes = {
   data: PropTypes.array

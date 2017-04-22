@@ -1,12 +1,10 @@
 import React from 'react';
 import Aside from '../aside/aside.jsx';
 
-export default class Chat extends React.Component {
-	render() {
-		return (
-			<div className="chat">
-				<Aside />
-			</div>
-		);
-	}
-}
+const Chat = () => (
+  <div className="chat">
+    <Aside />
+  </div>
+);
+
+export default Chat;

@@ -1,24 +1,36 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import AlertCount from '../alert-count/alert-count.jsx';
 
 import userPic from '../../images/user.png';
 
-class PeopleListItem extends React.Component {
-  render() {
-    const {title} = this.props;
-    return(
-      <li className="people-list__item people-list__item_alert">
-        <img src={userPic} className="icon-users" alt="users" />
-        <span className="people-list__item-title">Jesus Cruz</span>
-        <span className="people-list__item-icon alert-count">2</span>
-      </li>
-    );
+const PeopleListItem = ({data}) => {
+  let isActive, isAlert;
+
+  if (data.modifiers) {
+    isActive = data.modifiers.indexOf('active') > -1;
+    isAlert = data.modifiers.indexOf('alert') > -1;
   }
+
+  return (
+    <li className={classnames({
+      'people-list__item': true,
+      'people-list__item_alert': isAlert,
+      'people-list__item_active': isActive
+    })}>
+      <img src={userPic} className="icon-users" alt="users" />
+      <span className="people-list__item-title">{data.title}</span>
+      <AlertCount className="people-list__item-icon" count={2}/>
+    </li>
+  );
 }
 
 PeopleListItem.propTypes = {
-  title: PropTypes.string
+  data: PropTypes.shape({
+    title: PropTypes.string,
+    modifiers: PropTypes.array
+  })
 };
 
 export default PeopleListItem;

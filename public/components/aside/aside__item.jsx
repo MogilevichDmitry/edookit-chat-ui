@@ -1,22 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-class AsideItem extends React.Component {
-  render() {
-    return(
-      <div className="aside__item">
+const AsideItem = ({isHeader, title, children}) => (
+  <div className="aside__item">
+    {isHeader ?
+      <div className="aside__item-header">
         <div className="aside__item-title">
-           {this.props.title}
+           {title}
         </div>
-        {this.props.children}
+      </div> :
+      <div className="aside__item-title">
+         {title}
       </div>
-    );
-  }
-}
+    }
+    {children}
+  </div>
+);
 
 AsideItem.propTypes = {
+  isHeader: PropTypes.bool,
   title: PropTypes.string,
   children: PropTypes.node
+}
+
+AsideItem.defaultProps = {
+  isHeader: true
 }
 
 export default AsideItem;

@@ -4,19 +4,13 @@ import ChannelsListItem from './channels-list__item.jsx';
 
 import './channel-list.less';
 
-class ChannelsList extends React.Component {
-  render() {
-    const {data} = this.props;
-
-    return(
-      <ul className="channels-list">
-        {data.map((title) => {
-          return <ChannelsListItem key={title} title={title} />
-        })}
-      </ul>
-    );
-  }
-}
+const ChannelsList = ({data}) => (
+  <ul className="channels-list">
+    {data.map((item) => {
+      return <ChannelsListItem key={item.title} data={item} />
+    })}
+  </ul>
+);
 
 ChannelsList.propTypes = {
   data: PropTypes.array

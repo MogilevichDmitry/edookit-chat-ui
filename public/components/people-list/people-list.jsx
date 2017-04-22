@@ -4,19 +4,13 @@ import PeopleListItem from './people-list__item.jsx';
 
 import './people-list.less';
 
-class PeopleList extends React.Component {
-  render() {
-    const {data} = this.props;
-
-    return(
-      <ul className="people-list">
-        {data.map((title) => {
-          return <PeopleListItem key={title} title={title} />
-        })}
-      </ul>
-    );
-  }
-}
+const PeopleList = ({data}) => (
+  <ul className="people-list">
+    {data.map((item) => {
+      return <PeopleListItem key={item.title} data={item} />
+    })}
+  </ul>
+);
 
 PeopleList.propTypes = {
   data: PropTypes.array
