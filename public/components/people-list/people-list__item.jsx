@@ -19,9 +19,9 @@ const PeopleListItem = ({data}) => {
       'people-list__item_alert': isAlert,
       'people-list__item_active': isActive
     })}>
-      <img src={userPic} className="icon-users" alt="users" />
+      <img src={userPic} className="people-list__item-photo" alt="user photo" />
       <span className="people-list__item-title">{data.title}</span>
-      <AlertCount className="people-list__item-icon" count={2}/>
+      <AlertCount className="people-list__item-alert-count" count={2}/>
     </li>
   );
 }

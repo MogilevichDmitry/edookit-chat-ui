@@ -20,7 +20,6 @@ import './aside.less';
 
 const Aside = () => (
   <div className="aside">
-    <ChannelsHeaderButton />
     <AsideItem title="Groups" isHeader={false}>
       <GroupsList data={data.groupsList} />
     </AsideItem>

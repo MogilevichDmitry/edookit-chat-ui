@@ -17,7 +17,7 @@ const ChannelsListItem = ({data}) => {
       'channels-list__item_alert': isAlert,
       'channels-list__item_active': isActive
     })}>
-      <AlertCount className="channels-list__item-icon" count={3}/>
+      <AlertCount className="channels-list__item-alert-count" count={3}/>
       <span className="channels-list__item-icon icon-peoples"></span>
       <span className="channels-list__item-title">{data.title}</span>
     </li>
