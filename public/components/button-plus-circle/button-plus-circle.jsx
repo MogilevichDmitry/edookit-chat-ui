@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
 import './button-plus-circle.less';
 
 const ButtonPlusCircle = ({className, children}) => (
-  <button className={`${className} btn-plus-circle`}>
+  <button className={classnames('btn-plus-circle', className)}>
     {children}
   </button>
 );

@@ -1,4 +1,7 @@
 import React from 'react';
+import {SocialButton, Checkbox} from 'shared-components';
+import LogoChat from '../logo-chat/logo-chat.jsx';
+import LogoSpace from '../logo-space/logo-space.jsx';
 import './Login.less';
 
 export default class Login extends React.Component {
@@ -7,15 +10,14 @@ export default class Login extends React.Component {
       <div className="login">
         <div className="login__form">
           <div className="login__form-logos">
-            <span className="logo-chat"></span>
-            <span className="logo-space"></span>
+            <LogoChat />
+            <LogoSpace />
           </div>
           <div className="login__form-field">
             <input type="text" placeholder="E-mail" className="login__form-field__mail" />
             <input type="text" placeholder="Password" className="login__form-field__pass" />
             <div className="login__form-field__checkbox">
-              <input type="checkbox" className="login__form-field__checkbox-box" />
-              <span className="login__form-field__checkbox-title">Remember password</span>
+              <Checkbox label="Remember password"/>
             </div>
           </div>
           <div className="login__form-btn">
@@ -27,9 +29,9 @@ export default class Login extends React.Component {
             <span className="login__form-registry_in">Sign in with:</span>
           </div>
           <div className="login__form-socials">
-            <span className="socials_fb"></span>
-            <span className="socials_gg"></span>
-            <span className="socials_ms"></span>
+            <SocialButton type="facebook"/>
+            <SocialButton type="google"/>
+            <SocialButton type="microsoft"/>
           </div>
         </div>
       </div>
