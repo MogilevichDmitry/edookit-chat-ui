@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import AlertCount from '../alert-count/alert-count.jsx';
 
-import userPic from '../../images/user.png';
+import userPic from '../../resources/images/user.png';
 
 const PeopleListItem = ({data}) => {
   let isActive, isAlert;
