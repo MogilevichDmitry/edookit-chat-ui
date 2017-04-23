@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import SVGInline from 'react-svg-inline';
+import Icon from '../icon/icon.jsx';
 import IconSpeaker from '../../resources/icons/icon-speaker.svg';
 import './button-invite.less';
 
 const ButtonInvite = ({className}) => (
   <button className={classnames('button-invite', className)}>
-    <SVGInline className="button-invite__icon" svg={IconSpeaker} />
+    <Icon className="button-invite__icon" svg={IconSpeaker} />
     <span className="button-invite__title">Invite people</span>
   </button>
 );

@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import SVGInline from 'react-svg-inline';
+import Icon from '../icon/icon.jsx';
 import IconMail from '../../resources/icons/icon-mail.svg';
 import './button-mail.less';
 
 const ButtonPlusCircle = ({className}) => (
   <button className={classnames('button-mail', className)}>
-    <SVGInline svg={IconMail} />
+    <Icon svg={IconMail} />
   </button>
 );
 

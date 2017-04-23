@@ -7,14 +7,6 @@ import ButtonInvite from '../button-invite/button-invite.jsx';
 import ButtonPlusCircle from '../button-plus-circle/button-plus-circle.jsx';
 import ButtonMail from '../button-mail/button-mail.jsx';
 
-const ChannelsHeaderButton = () => (
-  <ButtonPlusCircle>Add Channel</ButtonPlusCircle>
-);
-
-const PeopleHeaderButton = () => (
-  <ButtonMail>Send message</ButtonMail>
-);
-
 import data from '../../constants/aside.data.js';
 import './aside.less';
 
@@ -23,10 +15,10 @@ const Aside = () => (
     <AsideItem title="Groups" isHeader={false}>
       <GroupsList data={data.groupsList} />
     </AsideItem>
-    <AsideItem title="Channels" headerButton={<ChannelsHeaderButton />}>
+    <AsideItem title="Channels" headerButton={<ButtonPlusCircle />}>
       <ChannelsList data={data.channelsList} />
     </AsideItem>
-    <AsideItem title="People" headerButton={<PeopleHeaderButton />}>
+    <AsideItem title="People" headerButton={<ButtonMail />}>
       <PeopleList data={data.peopleList} />
     </AsideItem>
     <ButtonInvite className="aside__button-invite" />

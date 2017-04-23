@@ -1,14 +1,16 @@
 import React from 'react';
 import ButtonPlusCircle from '../button-plus-circle/button-plus-circle.jsx';
+import ButtonSend from '../button-send/button-send.jsx';
+import './send-form.less';
 
 const SendForm = () => (
   <form className="send-form">
-    <input className="send-form__file-loader-input" type="file" id="send-form__file-loader"/>
-    <label className="send-form__file-loader-label" htmlFor="send-form__file-load">
-      <ButtonPlusCircle>Load files</ButtonPlusCircle>
+    <label className="send-form__file-loader-label">
+      <ButtonPlusCircle />
+      <input className="send-form__file-loader-input" type="file"/>
     </label>
     <input className="send-form__message-input" type="text" placeholder="Write something cool..."/>
-    <input className="send-form__send-button " type="submit"/>
+    <ButtonSend className="send-form__send-button" type="submit" />
   </form>
 )
 
