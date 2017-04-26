@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import AlertCount from '../alert-count/alert-count.jsx';
+import Icon from '../icon/icon.jsx';
+import IconGroupChannel from '../../resources/icons/group-channel.svg';
 
 const ChannelsListItem = ({data}) => {
   let isActive, isAlert;
@@ -18,7 +20,7 @@ const ChannelsListItem = ({data}) => {
       'channels-list__item_active': isActive
     })}>
       <AlertCount className="channels-list__item-alert-count" count={3}/>
-      <span className="channels-list__item-icon icon-peoples"></span>
+      <Icon className="channels-list__item-icon icon-peoples" svg={IconGroupChannel} />
       <span className="channels-list__item-title">{data.title}</span>
     </li>
   );
