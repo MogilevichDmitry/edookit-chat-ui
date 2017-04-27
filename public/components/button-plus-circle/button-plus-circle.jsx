@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import Icon from '../icon/icon.jsx';
-import IconPlusCircle from '../../resources/icons/icon-plus-circle.svg';
+import IconPlusCircle from '!raw-loader!../../resources/icons/icon-plus-circle.svg';
 import './button-plus-circle.less';
 
 const ButtonPlusCircle = ({className, type, onClick}) => (

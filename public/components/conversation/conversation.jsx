@@ -18,11 +18,13 @@ const Conversation = () => (
       channel={data.channel}
       user={data.user}
     />
-  <ButtonExpandSide className="conversation__button-expand-side"/>
-    <Messages />
-    <SendForm />
-    <div className="conversation__typing typing">
-      {data.user} is typing...
+    <ButtonExpandSide className="conversation__button-expand-side" />
+    <Messages className="conversation__messages" />
+    <div style={{position: 'absolute', bottom: '10px', width: '100%', padding: '0 20px'}}>
+      <SendForm />
+      <div className="conversation__typing typing">
+        {data.user} is typing...
+      </div>
     </div>
   </div>
 )

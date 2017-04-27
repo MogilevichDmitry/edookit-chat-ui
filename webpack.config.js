@@ -20,11 +20,7 @@ module.exports = {
   module: {
     loaders: [
       { test: /\.jsx?$/, loader: 'babel-loader', exclude: /node_modules/ },
-      {
-      test: /\.svg$/,
-      loader: 'raw-loader'
-    },
-      { test: /\.(woff2?|jpe?g|png|gif|ico)$/, loader: 'url-loader?limit=10000000' },
+      { test: /\.(woff2?|svg|jpe?g|png|gif|ico)$/, loader: 'url-loader?limit=10000000' },
       { test: /\.less$/, loaders: ['style-loader', 'css-loader', 'less-loader', 'postcss-loader'] }
     ]
   },

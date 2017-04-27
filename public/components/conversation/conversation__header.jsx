@@ -1,20 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import ButtonCall from '../button-call/button-call.jsx';
+import ButtonSearch from '../button-search/button-search.jsx';
+import ButtonMenu from '../button-menu/button-menu.jsx';
+import ButtonNotification from '../button-notification/button-notification.jsx';
 
 const ConversationHeader = ({group, channel, user}) => (
   <div className="conversation__header">
     <div className="conversation__header-headings">
       <h1 className="conversation__header-title">
-        {group}
+        {group} / {channel}
       </h1>
-      <h2 className="conversation__header-second-title">
-        {channel}
-      </h2>
     </div>
+    <ButtonCall />
     <div className="conversation__header-controls">
-      <div>search</div>
-      <div>menu</div>
-      <div>notif</div>
+      <ButtonSearch />
+      <ButtonMenu />
+      <ButtonNotification />
       <div className="conversation__header-username">
         {user}
       </div>
