@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import AlertCount from '../alert-count/alert-count.jsx';
 import Icon from '../icon/icon.jsx';
-import IconGroupChannel from '../../resources/icons/group-channel.svg';
+import IconGroupChannel from '!raw-loader!../../resources/icons/icon-people.svg';
 
 const ChannelsListItem = ({data}) => {
   let isActive, isAlert;

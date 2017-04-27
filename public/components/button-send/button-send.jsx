@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import Icon from '../icon/icon.jsx';
-import IconSend from '../../resources/icons/icon-send.svg';
+import IconSend from '!raw-loader!../../resources/icons/icon-send.svg';
 import './button-send.less';
 
 const ButtonSend = ({className, type}) => (
