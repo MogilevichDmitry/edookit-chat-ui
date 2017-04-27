@@ -12,11 +12,11 @@ const ConversationHeader = ({group, channel, user}) => (
         {group} / {channel}
       </h1>
     </div>
-    <ButtonCall />
+    <ButtonCall className="conversation__header-button-call" />
     <div className="conversation__header-controls">
-      <ButtonSearch />
-      <ButtonMenu />
-      <ButtonNotification />
+      <ButtonSearch className="conversation__header-button-search" />
+      <ButtonMenu className="conversation__header-button-menu" />
+      <ButtonNotification className="conversation__header-button-notification" />
       <div className="conversation__header-username">
         {user}
       </div>

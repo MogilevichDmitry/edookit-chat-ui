@@ -7,7 +7,7 @@ import './button-menu.less';
 
 const ButtonMenu = ({className}) => (
   <button className={classnames('btn-menu', className)}>
-      <Icon svg={IconMenu} />
+    <Icon svg={IconMenu} />
   </button>
 );
 

@@ -1,10 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const MessagesDelimiter = () => (
+const MessagesDelimiter = ({title}) => (
   <div className="messages__delimiter">
-    Today
+    {title}
   </div>
 )
+
+MessagesDelimiter.propTypes = {
+  title: PropTypes.string
+}
 
 export default MessagesDelimiter;

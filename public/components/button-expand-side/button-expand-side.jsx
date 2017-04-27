@@ -7,7 +7,7 @@ import './button-expand-side.less';
 
 const ButtonExpandSide = ({className}) => (
   <button className={classnames('button-expand-side', className)}>
-      <Icon svg={IconExpandSide} />
+    <Icon svg={IconExpandSide} />
   </button>
 );
 

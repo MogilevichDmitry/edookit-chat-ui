@@ -7,7 +7,7 @@ import './button-notification.less';
 
 const ButtonNotification = ({className}) => (
   <button className={classnames('btn-notification', className)}>
-      <Icon svg={IconNotification} />
+    <Icon svg={IconNotification} />
   </button>
 );
 

@@ -7,7 +7,7 @@ import './button-search.less';
 
 const ButtonSearch = ({className}) => (
   <button className={classnames('btn-search', className)}>
-      <Icon svg={IconSearch} />
+    <Icon svg={IconSearch} />
   </button>
 );
 

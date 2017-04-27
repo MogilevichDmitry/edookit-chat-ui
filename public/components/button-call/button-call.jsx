@@ -7,7 +7,7 @@ import './button-call.less';
 
 const ButtonCall = ({className}) => (
   <button className={classnames('btn-call', className)}>
-      <Icon svg={IconCall} />
+    <Icon svg={IconCall} />
   </button>
 );
 
