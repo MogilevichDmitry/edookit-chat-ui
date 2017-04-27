@@ -5,8 +5,11 @@ export default  {
       modifiers: ['alert', 'active']
     },
     {
-      title: 'T1C',
+      title: 'UZ',
       modifiers: ['alert']
+    },
+    {
+      title: 'T1C'
     },
     {
       title: 'ZSZ'
