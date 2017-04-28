@@ -1,8 +1,17 @@
+@import '~config';
+
 .messages {
   &__item {
     display: flex;
     margin-bottom: 20px;
     color: #12202b;
+
+    &_ownMessage {
+      .messages__item-header {
+        opacity: 1;
+        color: #377fea;
+      }
+    }
 
     &-main {
       margin-left: 10px;
@@ -11,10 +20,11 @@
     &-header {
       opacity: 0.6;
       font-size: 15px;
+      font-weight: @fontWeightBold;
     }
 
     &-username {
-      font-weight: 600;
+      font-weight: @fontWeightBold;
     }
 
     &-time {
@@ -25,29 +35,44 @@
     &-text {
       font-size: 15px;
     }
-  }
-  &__item-img {
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-  }
-  &__delimiter {
-    position: relative;
-    text-align: center;
-    width: 100%;
-    color: #12202b;
-    font-size: 18px;
-    opacity: 0.6;
 
-    &:after {
-      content: '';
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      height: 1px;
+    &-img {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+    }
+
+    &-attachments {
+      margin-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+
+      &-file {
+        margin-left: 25px;
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+
+    &_delimiter {
+      position: relative;
+      justify-content: center;
       width: 100%;
-      background: linear-gradient(to left, rgba(221, 221, 221, 0), #377fea 50%, rgba(221, 221, 221, 0));
+      font-size: 18px;
+      opacity: 0.6;
+      margin-bottom: 25px;
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -5px;
+        height: 1px;
+        width: 100%;
+        background: linear-gradient(to left, rgba(221, 221, 221, 0), #377fea 50%, rgba(221, 221, 221, 0));
+      }
     }
   }
 }

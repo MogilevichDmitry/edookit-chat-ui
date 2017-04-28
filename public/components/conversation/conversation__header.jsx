@@ -7,11 +7,9 @@ import ButtonNotification from '../button-notification/button-notification.jsx';
 
 const ConversationHeader = ({group, channel, user}) => (
   <div className="conversation__header">
-    <div className="conversation__header-headings">
-      <h1 className="conversation__header-title">
-        {group} / {channel}
-      </h1>
-    </div>
+    <h1 className="conversation__header-title">
+      {`${group} / ${channel}`}
+    </h1>
     <ButtonCall className="conversation__header-button-call" />
     <div className="conversation__header-controls">
       <ButtonSearch className="conversation__header-button-search" />

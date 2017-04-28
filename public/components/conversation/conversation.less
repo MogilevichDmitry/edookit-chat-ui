@@ -1,3 +1,5 @@
+@import '~config';
+
 .conversation {
   width: calc(100% - 18.4%);
   position: relative;
@@ -15,7 +17,7 @@
 
     &-title {
       font-size: 21px;
-      font-weight: bold;
+      font-weight: @fontWeightBold;
       color: #377fea;
     }
 
@@ -36,9 +38,11 @@
     &-button-search {
       margin-right: 26px;
     }
+
     &-button-menu {
       margin-right: 27px;
     }
+
     &-button-notification {
       margin-right: 28px;
     }
@@ -49,7 +53,7 @@
     top: 56px;
     left: 0;
     right: 0;
-    padding: 0 20px;
+    padding: 0 25px;
     height: ~"calc(100% - 56px - 62px)";
   }
 
@@ -57,15 +61,11 @@
     position: absolute;
     bottom: 16px;
     width: 100%;
-    padding: 0 20px;
+    padding: 0 25px;
   }
 
   &__typing {
-    font-size: 13px;
     margin-top: 5px;
-    margin-left: 5px;
-    opacity: 0.3;
-    color: #12202b;
   }
 
   &__button-expand-side {

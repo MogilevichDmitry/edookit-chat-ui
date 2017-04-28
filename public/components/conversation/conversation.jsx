@@ -5,7 +5,7 @@ import Messages from '../messages/messages.jsx';
 import ConversationHeader from './conversation__header.jsx';
 import ButtonExpandSide from '../button-expand-side/button-expand-side.jsx';
 import TypingEvent from '../typing-event/typing-event.jsx';
-import data from '../../constants/conversation.data.js';
+import data from '../../data/conversation.data.js';
 import './conversation.less';
 
 const Conversation = () => (

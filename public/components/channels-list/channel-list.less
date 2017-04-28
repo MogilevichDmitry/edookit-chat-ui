@@ -1,3 +1,5 @@
+@import '~config';
+
 .channels-list {
   list-style: none;
 
@@ -5,7 +7,7 @@
     display: flex;
     align-items: center;
     font-size: 15px;
-    font-weight: 400;
+    font-weight: @fontWeightLight;
     padding: 3px 0px 4px 4px;
     margin-right: 21px;
     margin-top: 5px;
@@ -22,7 +24,7 @@
         display: none;
       }
       .channels-list__item-title {
-        font-weight: 600;
+        font-weight: @fontWeightRegular;
       }
     }
 

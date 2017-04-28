@@ -1,23 +1,30 @@
+@import '~config';
+
 .typing-event {
-  color: #a09f9d;
   font-size: 13px;
-  margin-top: 4px;
+  opacity: 0.3;
+  color: #12202b;
+
   &__dots {
     margin-left: 2px;
   }
+
   &__dot {
     position: relative;
     bottom: 0px;
     -webkit-animation: jump 1500ms infinite;
     animation: jump 2s infinite;
+
     &:nth-child(1) {
       -webkit-animation-delay: 200ms;
       animation-delay: 200ms;
     }
+
     &:nth-child(2) {
       -webkit-animation-delay: 400ms;
       animation-delay: 400ms;
     }
+
     &:nth-child(3) {
       -webkit-animation-delay: 600ms;
       animation-delay: 600ms;

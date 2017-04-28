@@ -25,14 +25,38 @@ export default [
   },
   {
     id: '5',
-    username: 'Francisco Turner',
+    username: 'Jan Uhl',
     time: '[11:08 AM]',
-    text: 'Diky za pochvalu pro ostatni buch jen dodal: nehledte prosim na vzhled, jde pouze o funkcionalitu'
+    text: 'This package is the official replacement for classSet, which was originally shipped in the React.js Addons bundle. One of its primary use cases is to make dynamic and conditional className props simpler to work with (especially more so than conditional string manipulation). So where you may have the following code to generate a className prop for a <button> in React.'
   },
   {
     id: '6',
+    username: 'Francisco Turner',
+    time: '[11:08 AM]',
+    text: 'Diky za pochvalu pro ostatni buch jen dodal: nehledte prosim na vzhled, jde pouze o funkcionalitu',
+    modifiers: ['ownMessage']
+  },
+  {
+    id: '7',
+    title: 'Today',
+    modifiers: ['delimiter'],
+  },
+  {
+    id: '8',
     username: 'Lucas Moravec',
     time: '[11:08 AM]',
-    text: 'ak Ize zmenit ikonu skoly pri prihlasovani a v zahlavi?'
+    text: 'ak Ize zmenit ikonu skoly pri prihlasovani a v zahlavi?',
+    attachments: [
+      {
+        id: '1',
+        format: 'jpg',
+        name: 'Prilozeny subor1'
+      },
+      {
+        id: '2',
+        format: 'png',
+        name: 'Prilozeny subor1'
+      }
+    ]
   }
 ]
