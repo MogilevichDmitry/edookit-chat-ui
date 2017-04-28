@@ -4,11 +4,11 @@
   &__item {
     display: flex;
     align-items: center;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 400;
-    padding: 4px 0px 4px 3px;
-    margin-right: 11px;
-    margin-top: 3px;
+    padding: 3px 0px 4px 4px;
+    margin-right: 21px;
+    margin-top: 5px;
 
     .alert-count {
       display: none;
@@ -17,7 +17,6 @@
     &_alert {
       .alert-count {
         display: flex;
-        margin-top: 1px;
       }
       .icon-peoples {
         display: none;
@@ -41,25 +40,29 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      font-size: 11px;
-      width: 18px;
-      height: 18px;
+      font-size: 10px;
+      width: 16px;
+      height: 16px;
+      margin-left: 1px;
     }
 
     &-title {
-      margin-left: 4px;
-      letter-spacing: 0.15px;
+      margin-left: 5px;
     }
 
     &_active {
       background-color: #FFF;
       border-radius: 6px;
       color: #377fea;
-      margin-top: 4px;
+      margin-top: 5px;
 
       .icon-svg {
         fill: #377FEA;
       }
     }
+  }
+
+  &__item:first-child {
+    padding-top: 5px;
   }
 }

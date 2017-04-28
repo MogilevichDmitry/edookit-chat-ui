@@ -5,18 +5,13 @@ import MessagesItem from './messages__item.jsx';
 import MessagesDelimiter from './messages__delimiter.jsx';
 import './messages.less';
 
+import data from '../../constants/messages.data.js';
+
 const Messages = ({className}) => (
   <div className={classnames('messages', className)}>
-    <MessagesItem />
-    <MessagesItem />
-    <MessagesItem />
-    <MessagesItem />
-    <MessagesItem />
-    <MessagesItem />
-    <MessagesItem />
-    <MessagesDelimiter title="Today" />
-    <MessagesItem />
-    <MessagesItem />
+    {data.map((item) => {
+      return <MessagesItem key={item.id} data={item} />
+    })}
   </div>
 );
 
