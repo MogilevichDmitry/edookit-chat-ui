@@ -15,13 +15,18 @@ const Aside = () => (
     <AsideItem title="Groups" isHeader={false}>
       <GroupsList data={data.groupsList} />
     </AsideItem>
-    <AsideItem title="Channels" headerButton={<ButtonPlusCircle />}>
+    <AsideItem
+      title="Channels"
+      headerButton={
+        <ButtonPlusCircle className="aside__button-plus-circle" />
+      }
+    >
       <ChannelsList data={data.channelsList} />
     </AsideItem>
     <AsideItem title="People" headerButton={<ButtonMail />}>
       <PeopleList data={data.peopleList} />
     </AsideItem>
-    <ButtonInvite className="aside__button-invite" />
+    <ButtonInvite  className="aside__button-invite"/>
   </div>
 );
 
