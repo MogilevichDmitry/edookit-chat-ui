@@ -1,20 +1,37 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Icon from '../icon/icon.jsx';
-import IconSpeaker from '!raw-loader!../../resources/icons/icon-speaker.svg';
+import IconPDF from '!raw-loader!../../resources/icons/icon-pdf.svg';
+import IconJPG from '!raw-loader!../../resources/icons/icon-jpg.svg';
 import './attachment.less';
 
-const Attachment = ({className, data}) => {
-  const attachmentClassName = `attachment attachment_${data.format} ${className}`;
+const PDF = 'PDF';
+const JPG = 'JPG';
 
+const Attachment = ({className, data}) => {
   return (
-    <div className={attachmentClassName}>
-      <Icon className="attachment__icon" svg={IconSpeaker}/>
+    <a href="#" className={`attachment attachment_${data.format} ${className}`}>
+      {renderIcon(data.format)}
       <span className="attachment__title">
-        {`${data.name}.${data.format}`}
+        <span className="attachment__title-name">{data.name}</span>
+        <span className="attachment__title-format">{`.${data.format}`}</span>
       </span>
-    </div>
+    </a>
   )
+}
+
+const renderIcon = (format) => {
+  switch(format.toUpperCase()) {
+    case PDF:
+      return <Icon className="attachment__icon" svg={IconPDF}/>;
+      break;
+    case JPG:
+      return <Icon className="attachment__icon" svg={IconJPG}/>;
+      break;
+    default:
+      return <Icon className="attachment__icon" svg={IconPDF}/>;
+      break;
+  }
 }
 
 Attachment.propTypes = {

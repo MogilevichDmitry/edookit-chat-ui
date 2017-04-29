@@ -56,6 +56,11 @@ export default [
         id: '2',
         format: 'png',
         name: 'Prilozeny subor1'
+      },
+      {
+        id: '3',
+        format: 'png',
+        name: 'Long name attachment long long long'
       }
     ]
   }

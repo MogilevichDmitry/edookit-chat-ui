@@ -6,11 +6,13 @@
   &__item {
     display: flex;
     align-items: center;
+    cursor: pointer;
     font-size: 15px;
     font-weight: @fontWeightLight;
     padding: 3px 0px 4px 4px;
-    margin-right: 21px;
-    margin-top: 5px;
+    margin: 5px 21px 0 0;
+    border-radius: @borderRadius;
+    transition: 0.3s;
 
     .alert-count {
       display: none;
@@ -46,20 +48,26 @@
       width: 16px;
       height: 16px;
       margin-left: 1px;
+
+      .icon-peoples-svg {
+        transition: 0.3s;
+      }
     }
 
     &-title {
       margin-left: 5px;
+      transition: 0.3s;
     }
 
-    &_active {
+    &_active, &:hover {
       background-color: #FFF;
-      border-radius: 6px;
-      color: #377fea;
-      margin-top: 5px;
-
-      .icon-svg {
-        fill: #377FEA;
+      .channels-list__item-title {
+        color: #377fea;
+      }
+      .channels-list__item-icon {
+        .icon-peoples-svg {
+          fill: #377FEA;
+        }
       }
     }
   }
