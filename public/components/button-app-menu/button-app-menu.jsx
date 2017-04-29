@@ -2,17 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import Icon from '../icon/icon.jsx';
-import IconMenu from '!raw-loader!../../resources/icons/icon-menu.svg';
-import './button-menu.less';
+import IconMenu from '!raw-loader!../../resources/icons/icon-app-menu.svg';
+import './button-app-menu.less';
 
-const ButtonMenu = ({className}) => (
+const ButtonAppMenu = ({className}) => (
   <button className={classnames('btn-menu', className)}>
     <Icon svg={IconMenu} />
   </button>
 );
 
-ButtonMenu.propTypes = {
+ButtonAppMenu.propTypes = {
   className: PropTypes.string
 }
 
-export default ButtonMenu;
+export default ButtonAppMenu;
