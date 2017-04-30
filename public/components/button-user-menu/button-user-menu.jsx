@@ -6,7 +6,7 @@ import IconMenu from '!raw-loader!../../resources/icons/icon-menu.svg';
 import './button-user-menu.less';
 
 const ButtonUserMenu = ({className}) => (
-  <button className={classnames('btn-menu', className)}>
+  <button className={classnames('btn-user-menu', className)}>
     <Icon svg={IconMenu} />
   </button>
 );
