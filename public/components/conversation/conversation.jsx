@@ -20,10 +20,16 @@ class Conversation extends React.Component {
   }
 
   render() {
-    const {user, group, channel, toggleAside} = this.props;
+    const {user, group, channel, toggleAside, isAsideVisible} = this.props;
+
+    let onClick = () => {};
+
+    if (isAsideVisible) {
+     onClick = toggleAside;
+    }
 
     return (
-      <div className="conversation">
+      <div className="conversation" onClick={() => onClick()}>
         <ConversationHeader
           group={group}
           channel={channel}

@@ -33,6 +33,7 @@ export default class Chat extends React.Component {
           channel={data.channel}
           group={data.group}
           toggleAside={this.toggleAside}
+          isAsideVisible={this.state.isAsideVisible}
         />
       </div>
     );
