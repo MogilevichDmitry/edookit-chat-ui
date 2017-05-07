@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import AsideItem from './aside__item.jsx';
 import GroupsList from '../groups-list/groups-list.jsx';
 import ChannelsList from '../channels-list/channels-list.jsx';

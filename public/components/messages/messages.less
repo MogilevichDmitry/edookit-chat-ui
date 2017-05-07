@@ -6,6 +6,10 @@
     margin-bottom: 20px;
     color: #12202b;
 
+    &:last-child {
+      margin-bottom: 0;
+    }
+
     &_ownMessage {
       .messages__item-header {
         opacity: 1;
@@ -14,6 +18,7 @@
     }
 
     &-main {
+      width: 100%;
       margin-left: 10px;
     }
 
@@ -72,6 +77,22 @@
         height: 1px;
         width: 100%;
         background: linear-gradient(to left, rgba(221, 221, 221, 0), #377fea 50%, rgba(221, 221, 221, 0));
+      }
+    }
+  }
+}
+
+@media (max-width: 960px) {
+  .messages {
+    &__item {
+      &-attachments {
+        flex-direction: column;
+      }
+      &-attachments-file {
+        margin: 10px 0 0 0;
+        &:first-child {
+          margin-top: 0;
+        }
       }
     }
   }

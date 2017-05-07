@@ -1,31 +1,35 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ButtonCall from '../button-call/button-call.jsx';
-import ButtonSearch from '../button-search/button-search.jsx';
-import ButtonAppMenu from '../button-app-menu/button-app-menu.jsx';
-import ButtonNotification from '../button-notification/button-notification.jsx';
+import UserControls from '../user-controls/user-controls.jsx';
+import Icon from '../icon/icon.jsx';
+import IconDiscussions from '!raw-loader!../../resources/icons/icon-discussions.svg';
 
-const ConversationHeader = ({group, channel, user}) => (
+const ConversationHeader = ({group, channel, user, toggleAside}) => (
   <div className="conversation__header">
+    <button className="conversation__header-button-aside" onClick={() => toggleAside()}>
+      <Icon svg={IconDiscussions} />
+    </button>
     <h1 className="conversation__header-title">
       {`${group} / ${channel}`}
     </h1>
     <ButtonCall className="conversation__header-button-call" />
-    <div className="conversation__header-controls">
-      <ButtonSearch className="conversation__header-button-search" />
-      <ButtonAppMenu className="conversation__header-button-menu" />
-      <ButtonNotification className="conversation__header-button-notification" />
-      <div className="conversation__header-username">
-        {user}
-      </div>
-    </div>
+    <UserControls
+      className="conversation__header-controls"
+      user={user}
+      isSearch={true}
+    />
   </div>
 )
 
 ConversationHeader.propTypes = {
+  user: PropTypes.shape({
+    name: PropTypes.string,
+    family: PropTypes.string
+  }),
   group: PropTypes.string,
   channel: PropTypes.string,
-  user: PropTypes.string
+  toggleAside: PropTypes.func
 }
 
 export default ConversationHeader;

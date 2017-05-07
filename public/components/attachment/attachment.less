@@ -28,4 +28,26 @@
        text-overflow: ellipsis;
     }
   }
+  &__icon-download {
+    display: none;
+    width: 16px;
+    height: 16px;
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 960px) {
+  .attachment {
+    width: 100%;
+    height: auto;
+    padding: 4px 13px 4px 4px;
+    &__icon {
+      width: 20px;
+      height: 26px;
+      margin-right: 7px;
+    }
+    &__icon-download {
+      display: block;
+    }
+  }
 }

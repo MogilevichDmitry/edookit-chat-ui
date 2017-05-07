@@ -1,19 +1,32 @@
 @import '~config';
 
 .conversation {
-  width: calc(100% - 18.4%);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
   position: relative;
 
   &__header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
     display: flex;
     align-items: center;
+    flex-shrink: 0;
     height: 56px;
     background-color: #f5f5f5;
     padding: 0 40px 0 35px;
+    box-shadow: inset 0 -1px 0 0 #dddddd;
+
+    &-button-aside {
+      display: none;
+      height: 100%;
+      width: 47px;
+      padding: 15px 10px 15px 14px;
+      margin-right: 10px;
+      background: #377fea;
+      transition: 0.4s;
+      .icon-svg {
+        fill: white;
+      }
+    }
 
     &-title {
       font-size: 21px;
@@ -26,42 +39,23 @@
       align-items: center;
       margin-left: auto;
     }
-    &-username {
-      font-size: 15px;
-      color: #377fea;
-    }
 
     &-button-call {
       margin-left: 28px;
     }
-
-    &-button-search {
-      margin-right: 26px;
-    }
-
-    &-button-menu {
-      margin-right: 27px;
-    }
-
-    &-button-notification {
-      margin-right: 28px;
-    }
   }
 
   &__messages {
-    position: absolute;
-    top: 56px;
-    left: 0;
-    right: 0;
-    padding: 0 25px;
-    height: ~"calc(100% - 56px - 62px)";
+    padding: 15px 25px;
   }
 
   &__send-field {
-    position: absolute;
-    bottom: 16px;
+    display: flex;
+    flex-direction: column;
     width: 100%;
+    flex-shrink: 0;
     padding: 0 25px;
+    margin-bottom: 16px;
   }
 
   &__typing {
@@ -73,5 +67,61 @@
     top: 71px;
     right: 0;
     z-index: 1;
+  }
+
+  &__footer {
+    display: none;
+    height: 47px;
+    background: #f5f5f5;
+  }
+}
+
+@media (max-width: 960px) {
+  .conversation {
+
+    &__header {
+      height: 47px;
+      padding: 0 14px 0 0;
+
+      &-title {
+        font-size: 15px;
+      }
+
+      &-button-aside {
+        display: block;
+      }
+    }
+
+    &__button-expand-side {
+      display: none;
+    }
+
+    &__messages {
+      padding: 15px 10px;
+    }
+
+    &__send-field {
+      padding: 0;
+      margin: 0;
+    }
+
+    &__typing {
+      order: -1;
+      margin: 0 0 5px 10px;
+    }
+
+    &__footer {
+      display: flex;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .conversation {
+    &__header {
+      &-button-call {
+        margin-left: 10px;
+      }
+    }
   }
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Icon from '../icon/icon.jsx';
+import IconDownload from '!raw-loader!../../resources/icons/icon-download.svg';
 import IconPDF from '!raw-loader!../../resources/icons/icon-pdf.svg';
 import IconJPG from '!raw-loader!../../resources/icons/icon-jpg.svg';
 import './attachment.less';
@@ -16,6 +17,7 @@ const Attachment = ({className, data}) => {
         <span className="attachment__title-name">{data.name}</span>
         <span className="attachment__title-format">{`.${data.format}`}</span>
       </span>
+      <Icon className="attachment__icon-download" svg={IconDownload} />
     </a>
   )
 }
